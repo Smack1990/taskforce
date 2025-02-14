@@ -27,15 +27,20 @@ if (isset($_GET["edit"])) {
             <link rel="stylesheet" href="style.css">
         </head>
 
-        <body>
-            <h1>Redigera uppgift</h1>
+        <body class="bodyR">
+            <main class="redigera">
+            <h1 class="h1r">Redigera uppgift</h1>
             <form method="post" action="taskForceFunctions.php">
                 <input type="hidden" name="index" value="<?= $index; ?>">
                 <input class="input" type="text" name="newTask" value="<?= htmlspecialchars($todoList[$index]["task"]); ?>"
                     required>
                 <button class="button" type="submit" name="update">Spara</button>
             </form>
-            <a href="index.php">Tillbaka</a>
+            <button class="buttonredigera"><a href="index.php">Tillbaka</a></button>
+            </main>
+            <script>document.body.addEventListener("click", function() {
+    document.documentElement.classList.toggle("uppochner");
+});</script>
         </body>
 
         </html>
@@ -51,16 +56,15 @@ if (isset($_GET["edit"])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="10">
+    <meta http-equiv="refresh" content="100">
     <link rel="stylesheet" href="style.css">
     <title>Taskforce</title>
 </head>
 
 <body>
     <main>
-
         <form method="post" action="taskForceFunctions.php">
-            <input class="input" type="text" name="todo" placeholder="Uppgift att lägga till" required>
+            <input class="input" type="text" name="todo" placeholder="Lägg till uppgift.." required>
             <button class="button" type="submit">Lägg till</button>
             <h1>ToDo</h1>
         </form>
@@ -122,7 +126,7 @@ if (isset($_GET["edit"])) {
                     ?>">
                             <form method="get" action="index.php">
                                 <input type="hidden" name="edit" value="<?= $index; ?>">
-                                <button class="button" type="submit">Redigera</button>
+                                <button class="button"  type="submit">Redigera</button>
                             </form>
                         </td>
 
@@ -230,8 +234,11 @@ if (isset($_GET["edit"])) {
         </table>
         <form method="get" action="taskForceFunctions.php">
             <button class="buttonPapperskorg" type="submit" name="deleteAll">Töm papperskorg</button>
-
     </main>
+
+<script>document.body.addEventListener("click", function() {
+    document.documentElement.classList.toggle("uppochner");
+});</script>
 </body>
 
 </html>

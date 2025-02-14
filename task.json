@@ -1,32 +1,38 @@
 [
     {
-        "task": "fgh",
+        "task": "Laga Mat",
         "done": false,
-        "created_at": "2025-02-12 14:13:52",
-        "updated_at": "2025-02-12 21:14:21"
+        "created_at": "2025-02-14 08:31:21",
+        "updated_at": "2025-02-14 08:32:19"
     },
     {
-        "task": "hejhopp",
+        "task": "H\u00e4mta barn",
         "done": false,
-        "created_at": "2025-02-11 21:17:37",
-        "updated_at": "2025-02-11 21:17:42"
+        "created_at": "2025-02-14 08:31:26",
+        "updated_at": null
     },
     {
-        "task": "ghfghf",
+        "task": "N\u00e4 s\u00e5 h\u00e4r kan det inte vara.",
+        "done": false,
+        "created_at": "2025-02-14 11:30:23",
+        "updated_at": "2025-02-14 11:34:57"
+    },
+    {
+        "task": "hejhej hur m\u00e5r du? ",
+        "done": false,
+        "created_at": "2025-02-14 11:30:51",
+        "updated_at": "2025-02-14 11:44:36"
+    },
+    {
+        "task": "K\u00f6p fredagstacos",
         "done": true,
-        "created_at": "2025-02-12 21:14:27",
+        "created_at": "2025-02-14 08:31:55",
         "updated_at": null
     },
     {
-        "task": "nu",
-        "done": false,
-        "created_at": "2025-02-12 11:38:05",
-        "updated_at": null
-    },
-    {
-        "task": "fghdfghdfghdfghdfghfghfghfghfghfghfghfghfgh",
-        "done": false,
-        "created_at": "2025-02-12 21:53:27",
-        "updated_at": null
+        "task": "vi ska k\u00f6pa tacos",
+        "done": true,
+        "created_at": "2025-02-14 12:09:13",
+        "updated_at": "2025-02-14 12:09:38"
     }
 ]

@@ -1,6 +1,7 @@
 <?php
 $filename = "task.json";
 
+//----------------------Create-------------------------------------------//
 // skapa en uppgift
 function create($task)
 {
@@ -16,7 +17,7 @@ function create($task)
     ]; //assosiativ array med alla funktioner
     save($todoList);
 }
-
+//----------------------SAVE-------------------------------------------//
 // spara todo
 function save($todoList)
 {
@@ -25,7 +26,7 @@ function save($todoList)
     file_put_contents($filename, json_encode($todoList, JSON_PRETTY_PRINT));
 }
 
-
+//----------------------READ-------------------------------------------//
 //Läsa fil
 function read()
 {
@@ -39,7 +40,7 @@ function read()
     //returnera avkodad json 
     return json_decode($data, true) ?? [];
 }
-
+//----------------------DELETE-------------------------------------------//
 //radera ($valt index)
 function delete($index)
 {
@@ -61,6 +62,12 @@ function delete($index)
         save($todoList);
     }
 }
+//Getförfrågning för att radera
+if (isset($_GET["delete"])) {
+    delete($_GET["delete"]);
+    header("Location: index.php");
+    exit;
+}
 function deleteAll()
 {
     $deletedFile = "papperskorg.json";
@@ -70,6 +77,14 @@ function deleteAll()
     }
 }
 
+//get ta bort alla
+if (isset($_GET["deleteAll"])) {
+    deleteAll();
+    header("Location: index.php");
+    exit;
+}
+
+//----------------------DONE-------------------------------------------//
 //toggla checkboxrutan
 function done($index)
 {
@@ -80,7 +95,14 @@ function done($index)
         save($todoList);
     }
 }
+//get för checkboxmarkering
+if (isset($_GET["done"])) {
+    done($_GET["done"]);
+    header("Location: index.php");
+    exit;
+}
 
+//----------------------UPDATE-------------------------------------------//
 //uppdatera info
 function update($index, $newTask)
 {
@@ -93,6 +115,7 @@ function update($index, $newTask)
         save($todoList);
     }
 }
+//----------------------REGRET-------------------------------------------//
 function regret($index) // ångra uppgift flyttad till papperskorg. Hämtar tillbaka från json till json
 {
     $filnamn = "task.json";
@@ -126,6 +149,10 @@ function regret($index) // ångra uppgift flyttad till papperskorg. Hämtar till
         file_put_contents($deletedFile, json_encode($deletedTask, JSON_PRETTY_PRINT));
     }
 }
+if (isset($_GET["regret"])) {
+    regret($_GET["regret"]);
+    header("Location: index.php");
+}
 
 
 //Hantera POST för ny uppgift
@@ -139,28 +166,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     header("Location: index.php");
     exit;
 }
-//Getförfrågning för att radera
-if (isset($_GET["delete"])) {
-    delete($_GET["delete"]);
-    header("Location: index.php");
-    exit;
-}
-//get för checkboxmarkering
-if (isset($_GET["done"])) {
-    done($_GET["done"]);
-    header("Location: index.php");
-    exit;
-}
 
 
-//get ta bort alla
-if (isset($_GET["deleteAll"])) {
-    deleteAll();
-    header("Location: index.php");
-    exit;
-}
 
-if (isset($_GET["regret"])) {
-    regret($_GET["regret"]);
-    header("Location: index.php");
-}
+
+

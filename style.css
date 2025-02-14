@@ -1,12 +1,38 @@
 
+/* html {
+    transition: transform .0s;
+}
+
+html.uppochner {
+    transform: rotate(180deg);
+}  */
+
 body{
+    
+    /* filter:blur(2px); */
     background: radial-gradient(circle farthest-corner at bottom, rgb(10, 60, 73)10%,rgb(4, 89, 92), rgba(2, 98, 122, 0.7) 40%, rgba(234, 237, 83, 0.788) 65%,rgba(2, 122, 116,.8) 80%, rgba(0, 63, 35, 0.8) 100% ),
     radial-gradient(circle at top,  rgb(10, 60, 73), rgb(255, 0, 13)),
     linear-gradient(to top, rgba(234, 237, 83, 1), transparent);
    height: 100vh;
    
    align-content: center;
+   
 }
+.bodyR{
+    background: radial-gradient(circle farthest-corner at bottom, rgb(10, 60, 73)10%,rgb(4, 89, 92), rgba(2, 98, 122, 0.7) 40%, rgba(234, 237, 83, 0.788) 65%,rgba(2, 122, 116,.8) 80%, rgba(0, 63, 35, 0.8) 100% ),
+    radial-gradient(circle at top,  rgb(10, 60, 73), rgb(255, 0, 13)),
+    linear-gradient(to top, rgba(234, 237, 83, 1), transparent);
+    
+   height: 100vh;
+   justify-content: center; 
+   align-items: center; 
+   margin: 0;
+   padding: 0;
+   display: flex;
+   transform: rotate(180);
+}
+   
+
 main{
     margin: 2rem;
     padding: 2rem 0;
@@ -20,11 +46,59 @@ main{
     -webkit-backdrop-filter: blur(20px);
     border: 2px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 0px 30px rgba(0, 0, 0, 0.8),
-    inset 0 0px 400px 30px rgba(0, 0, 0, 0.4);
+    inset 0 0px 400px 30px rgba(0, 0, 0, 0.5);
     padding: 20px;
+    /* filter:blur(2px); */
  
    
     
+}
+.redigera {
+    display:flex;
+    flex-direction: column;
+    margin: 2rem;
+    padding: 2rem 0;
+    border: 1px solid black;
+    border-radius: 50px;
+    background: transparent;
+    height: 300px;
+    width: 70%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0)0% ,rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0)90%);
+    border-radius: 15px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0px 30px rgba(0, 0, 0, 0.8),
+    inset 0 0px 400px 30px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    transform: scaleY(-1);
+    
+    
+}
+.redigera:hover{
+}
+.redigera .buttonredigera {
+    
+    text-decoration: none;
+    font-family: sans-serif;
+    background-color: rgba(255, 86, 1, 0.853);
+    cursor: pointer;
+    width: auto;
+    padding:.5rem 1rem;
+    border:1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 8px; 
+    box-shadow: inset 0px 25px 25px rgba(255, 255, 255, 0.4);
+    transform: rotate(-180);
+}
+.redigera .buttonredigera a{
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
+.h1r{
+    width: 360px;
 }
 main h1{
     font-family: sans-serif;
@@ -39,51 +113,55 @@ main h1{
     border: 2px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.4),
     inset 1px 15px 30px rgba(242, 242, 242, 0.4);
-
+    animation: shake 0.2s infinite;
 }
+/* @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-78px); }
+    50% { transform: translateY(45px); }
+    75% { transform: translateX(-5px); }
+} */
 
     table {
-        
         background: transparent;
         width: 90%;
-        /* border-collapse: collapse; */
         margin-top: 10px;
         margin: 0 2rem;
-        /* margin-right: 2rem ; */
-        /* box-shadow: 0 10px 30px #000000; */
         border-radius: 8px; 
         margin-left: 4rem;
         margin-bottom: 4rem;
+        animation: shake 0.2s infinite;
     }
     
 tr{
     border-radius: 8px; 
-
+    animation: shake 0.4s infinite;
 }
 
 th, td {
     border-radius: 8px; 
     width: auto;
-    /* border-collapse: collapse; */
+  
     margin-top: 10px;
     
     
-    /* border: 1px solid #000000; */
+    
     padding: 10px;
     text-align: left;
     font-family: sans-serif;
-    /* align-items: center; */
-            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5),inset 0px 25px 25px rgba(255, 255, 255, 0.4);
-    
+   
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5),inset 0px 25px 25px rgba(255, 255, 255, 0.4);
+    animation: shake 0.8s infinite;
 }
 
 th {
-    /* background-color: #9a9a9a; */
+ 
     font-weight: 700;
     font-family: sans-serif;
     font-size: 1rem;
     box-shadow: inset 1px 15px 30px rgba(242, 242, 242, 0.4);
     border: 2px solid rgba(255, 255, 255, 0.4);
+    animation: shake 0.5s infinite;
 }
 
 
@@ -97,7 +175,19 @@ th {
     1px 8px 20px rgba(0, 0, 0, 0.8);
     border-radius: 8px;
     border:1px solid black;
+    animation: shake 0.1s infinite;
+    
 }
+.checkbox:hover{
+    box-shadow:none;
+    animation: rotate 1s infinite;
+}
+@keyframes rotate {
+    0% { transform: rotate(0px); }
+    /* 50% { transform: rotate(180deg); } */
+    100% { transform: rotate(360deg); }
+}
+
 .checkboxbefore{
     width: 20px;   
     height: 20px;
@@ -107,6 +197,11 @@ th {
     1px 8px 20px rgba(0, 0, 0, 0.5);
     border-radius: 50px;
     border:1px solid black;
+    animation: shake 0.2s infinite;
+}
+.checkboxbefore:hover{
+    box-shadow:none;
+    animation: rotate 1s infinite;
 }
 
 
@@ -119,6 +214,14 @@ th {
     border:1px solid rgba(0, 0, 0, 0.5);
     border-radius: 8px; 
     box-shadow: inset 0px 25px 25px rgba(255, 255, 255, 0.4);
+    animation: shake 0.2s infinite;
+    transition: transform .5s ease-in;
+  
+}
+button:hover{
+    
+    /* transform: translateX(-120rem); */
+    /* display:none; */
 
 }
 .buttonPapperskorg{
@@ -131,6 +234,13 @@ th {
     border:1px solid rgba(0, 0, 0, 0.5);
     border-radius: 8px; 
     box-shadow: inset 1px 15px 30px rgba(242, 242, 242, 0.4);
+    animation: shake 0.2s infinite;
+    transition: transform 5s ease-in;
+
+}
+.buttonpapperskorg:hover{
+    /* transform: translateX(-120rem); */
+    /* display:none; */
 
 }
 .input{
@@ -148,6 +258,7 @@ th {
     inset 1px 15px 30px rgba(242, 242, 242, 0.4);
     margin-bottom: .5rem;
     align-self: center;
+    animation: shake 0.2s infinite;
 }
 .input::placeholder{
     margin-left:.5rem;
@@ -156,3 +267,16 @@ th {
     font-weight: bold;
     font-size: 16px;
 }
+
+.input:focus{
+    width: 1500px;
+    height: 400px;
+    font-size: 8rem;
+    /* filter: blur(4px); */
+    
+}
+
+input:focus::placeholder{
+    font-size: 8rem;
+}
+
