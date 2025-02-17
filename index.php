@@ -38,9 +38,9 @@ if (isset($_GET["edit"])) {
             </form>
             <button class="buttonredigera"><a href="index.php">Tillbaka</a></button>
             </main>
-            <script>document.body.addEventListener("click", function() {
-    document.documentElement.classList.toggle("uppochner");
-});</script>
+            <!-- <script>document.body.addEventListener("click", function() {
+            document.documentElement.classList.toggle("uppochner");
+});</script> -->
         </body>
 
         </html>
@@ -115,7 +115,7 @@ if (isset($_GET["edit"])) {
                     ?>">
                             <?= $todos["updated_at"] ?? ""; ?>
                         </td>
-                        <!-- redigera -->
+                        
                         <td style="
                     <?php
                     if (!empty($todos['updated_at'])) {
@@ -236,9 +236,9 @@ if (isset($_GET["edit"])) {
             <button class="buttonPapperskorg" type="submit" name="deleteAll">Töm papperskorg</button>
     </main>
 
-<script>document.body.addEventListener("click", function() {
+<!-- <script>document.body.addEventListener("click", function() {
     document.documentElement.classList.toggle("uppochner");
-});</script>
+});</script> -->
 </body>
 
 </html>

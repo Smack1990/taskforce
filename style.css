@@ -13,7 +13,7 @@ body{
     background: radial-gradient(circle farthest-corner at bottom, rgb(10, 60, 73)10%,rgb(4, 89, 92), rgba(2, 98, 122, 0.7) 40%, rgba(234, 237, 83, 0.788) 65%,rgba(2, 122, 116,.8) 80%, rgba(0, 63, 35, 0.8) 100% ),
     radial-gradient(circle at top,  rgb(10, 60, 73), rgb(255, 0, 13)),
     linear-gradient(to top, rgba(234, 237, 83, 1), transparent);
-   height: 100vh;
+   height: auto;
    
    align-content: center;
    
@@ -29,7 +29,7 @@ body{
    margin: 0;
    padding: 0;
    display: flex;
-   transform: rotate(180);
+   /* transform: rotate(180); */
 }
    
 
@@ -73,12 +73,11 @@ main{
     padding: 20px;
     justify-content: center;
     align-items: center;
-    transform: scaleY(-1);
+    /* transform: scaleY(-1); */
     
     
 }
-.redigera:hover{
-}
+
 .redigera .buttonredigera {
     
     text-decoration: none;

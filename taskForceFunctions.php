@@ -91,7 +91,12 @@ function done($index)
     $todoList = read();
     //om variabeln finns, sätt värdet till true/false.
     if (isset($todoList[$index])) {
-        $todoList[$index]['done'] = !$todoList[$index]['done'];
+        if($todoList[$index]['done'] === true) {
+            $todoList[$index]['done'] = false;
+        }else{
+            $todoList[$index]['done'] = true;
+        }    
+
         save($todoList);
     }
 }
