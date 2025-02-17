@@ -29,14 +29,14 @@ if (isset($_GET["edit"])) {
 
         <body class="bodyR">
             <main class="redigera">
-            <h1 class="h1r">Redigera uppgift</h1>
-            <form method="post" action="taskForceFunctions.php">
-                <input type="hidden" name="index" value="<?= $index; ?>">
-                <input class="input" type="text" name="newTask" value="<?= htmlspecialchars($todoList[$index]["task"]); ?>"
-                    required>
-                <button class="button" type="submit" name="update">Spara</button>
-            </form>
-            <button class="buttonredigera"><a href="index.php">Tillbaka</a></button>
+                <h1 class="h1r">Redigera uppgift</h1>
+                <form method="post" action="taskForceFunctions.php">
+                    <input type="hidden" name="index" value="<?= $index; ?>">
+                    <input class="input" type="text" name="newTask" value="<?= htmlspecialchars($todoList[$index]["task"]); ?>"
+                        required>
+                    <button class="button" type="submit" name="update">Spara</button>
+                </form>
+                <button class="buttonredigera"><a href="index.php">Tillbaka</a></button>
             </main>
             <!-- <script>document.body.addEventListener("click", function() {
             document.documentElement.classList.toggle("uppochner");
@@ -56,7 +56,7 @@ if (isset($_GET["edit"])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="100">
+    <meta http-equiv="refresh" content="200">
     <link rel="stylesheet" href="style.css">
     <title>Taskforce</title>
 </head>
@@ -102,7 +102,7 @@ if (isset($_GET["edit"])) {
                         echo 'background:#BCBCBC;';
                     }
                     ?>">
-                            <?= $todos["created_at"] ?? "Okänd"; ?>
+                            <?= $todos["created_at"] ?? ""; ?>
                         </td>
 
                         <td style="
@@ -115,7 +115,7 @@ if (isset($_GET["edit"])) {
                     ?>">
                             <?= $todos["updated_at"] ?? ""; ?>
                         </td>
-                        
+
                         <td style="
                     <?php
                     if (!empty($todos['updated_at'])) {
@@ -126,7 +126,7 @@ if (isset($_GET["edit"])) {
                     ?>">
                             <form method="get" action="index.php">
                                 <input type="hidden" name="edit" value="<?= $index; ?>">
-                                <button class="button"  type="submit">Redigera</button>
+                                <button class="button" type="submit">Redigera</button>
                             </form>
                         </td>
 
@@ -236,7 +236,7 @@ if (isset($_GET["edit"])) {
             <button class="buttonPapperskorg" type="submit" name="deleteAll">Töm papperskorg</button>
     </main>
 
-<!-- <script>document.body.addEventListener("click", function() {
+    <!-- <script>document.body.addEventListener("click", function() {
     document.documentElement.classList.toggle("uppochner");
 });</script> -->
 </body>

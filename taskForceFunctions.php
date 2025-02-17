@@ -21,6 +21,7 @@ function create($task)
 // spara todo
 function save($todoList)
 {
+    //läsning av global variabel
     global $filename;
     //Lägg till fil, variabel, omkoda till json(variabel som skall läggas till, jsonformat)
     file_put_contents($filename, json_encode($todoList, JSON_PRETTY_PRINT));
@@ -48,9 +49,9 @@ function delete($index)
     $deleted = "papperskorg.json";
 
     if (isset($todoList[$index])) {
-        if(file_exists($deleted)){
+        if (file_exists($deleted)) {
             $deletedTask = json_decode(file_get_contents($deleted), true);
-        }else{
+        } else {
             $deletedTask = [];
         }
         $todoList[$index]['deleted_at'] = date("Y-m-d H:i:s"); //lägg till key för index deleted_ay
@@ -91,11 +92,11 @@ function done($index)
     $todoList = read();
     //om variabeln finns, sätt värdet till true/false.
     if (isset($todoList[$index])) {
-        if($todoList[$index]['done'] === true) {
+        if ($todoList[$index]['done'] === true) {
             $todoList[$index]['done'] = false;
-        }else{
+        } else {
             $todoList[$index]['done'] = true;
-        }    
+        }
 
         save($todoList);
     }
